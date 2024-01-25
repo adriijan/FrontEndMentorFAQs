@@ -1,0 +1,142 @@
+@font-face {
+	font-display: swap;
+	font-family: 'WorkSans';
+	font-weight: 400;
+	src: url(./faq-accordion-main/assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'WorkSansBold';
+	font-weight: 400;
+	src: url(./faq-accordion-main/assets/fonts/static/WorkSans-Bold.ttf);
+}
+
+html, body {
+    height: 100%;
+    width: 1440px;
+    max-width: 100%;
+    font-family: 'WorkSans';
+    font-size: 16px;
+    margin: 0;
+    background-color: hsl(275, 100%, 97%);
+    color: hsl(292, 42%, 14%);
+}
+
+
+.header {
+    background-image: url(./faq-accordion-main/assets/images/background-pattern-desktop.svg);
+    background-size: cover;
+    height: 40%;
+    width: 100%;
+    display: block;
+    z-index: 0;
+}
+
+.line {
+    display: block;
+    border-bottom: 1px solid rgb(250, 245, 252)
+}
+
+.box {
+    background-color: white;
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    top: -130px;
+}
+
+.main_title {
+    display: flex;
+    margin: 0 0 1em 0;
+}
+
+.main_title img {
+    width: 25px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.main_title h1 {
+    font-size: 2.8em;
+    font-family: 'WorkSansBold';
+    font-weight: 600;
+    margin: 0;
+    color: hsl(292, 42%, 14%);
+}
+
+.questions_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h4>a {
+    text-decoration: none;
+}
+
+h4>a:hover {
+    color: hsl(305, 54%, 53%);
+}
+
+p {
+    color: hsl(273, 8%, 58%);
+    margin-top: 0;
+}
+
+.icon
+{
+    width: 25px;
+}
+
+#icons.shown #icon_plus,
+#icons2.shown #icon_plus2,
+#icons3.shown #icon_plus3,
+#icons4.shown #icon_plus4 
+{
+    display: none;
+}
+
+#icons.hidden #icon_minus,
+#icons2.hidden #icon_minus2,
+#icons3.hidden #icon_minus3,
+#icons4.hidden #icon_minus4
+{
+    display: none;
+}
+
+.text_hidden {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    html, body {
+        font-size: 14px; 
+        height: 100%;
+    }
+
+    .header {
+        height: 40%; 
+        background-image: url(./faq-accordion-main/assets/images/background-pattern-mobile.svg);
+    }
+
+    .box {
+        width: 75%; 
+    }
+
+    .icon {
+        margin-left: 2.5em;
+    }
+}
+

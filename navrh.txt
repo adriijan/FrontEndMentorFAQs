@@ -1,0 +1,8 @@
+odpovědi - class ANSWER
+- skrytý text = ANSWER TEXT_HIDDEN
+- viditelný text = ANSWER TEXT_SHOWN
+
+ikony - class ICONS
+- skrytý text -> ikony mají třídu ICONS a HIDDEN => skryje se icon_plus
+- rozbalený text -> ikony mají třídu ICONS a SHOWN => skryje se icon_minus
+

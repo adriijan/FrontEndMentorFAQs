@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./faq-accordion-main/assets/images/favicon-32x32.png">
+    <title>FAQs</title>
+</head>
+<body>
+    
+<div class="header"></div>
+
+    <div class="box">
+
+        <div class="main_title">
+            <img src="./faq-accordion-main/assets/images/icon-star.svg" alt="star icon">
+            <h1>FAQs</h1>
+        </div>
+
+        <div class="questions">
+            <div class="questions_title">
+                <h4><a href="">What is Frontend Mentor, and how will it help me?</a></h4>
+                <div id="icons" class="hidden">
+                    <img src="./faq-accordion-main/assets/images/icon-minus.svg" alt="minus" id="icon_minus" class="icon">
+                    <img src="./faq-accordion-main/assets/images/icon-plus.svg" alt="plus" id="icon_plus" class="icon">
+                </div>
+            </div>
+        
+            <div class="answer text_hidden" id="answer">
+                <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with pojects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="questions_title">
+                <h4><a href="">Is Frontend Mentor free?</a></h4>
+                <div id="icons2" class="hidden">
+                    <img src="./faq-accordion-main/assets/images/icon-minus.svg" alt="minus" id="icon_minus2" class="icon">
+                    <img src="./faq-accordion-main/assets/images/icon-plus.svg" alt="plus" id="icon_plus2" class="icon">
+                </div>
+            </div>
+            <div class="answer text_hidden" id="answer2">
+                <p>The majority of our challenges are free, yes. We do have some that are premium and require a Pro subscription to access. It will say on each challenge whether they are free or premium, so it's easy to tell the difference.</p>
+             </div>
+
+            <div class="line"></div>
+
+          <div class="questions_title">
+                <h4><a href="">Can I use these projects in my portfolio?</a></h4>
+                <div id="icons3" class="hidden">
+                    <img src="./faq-accordion-main/assets/images/icon-minus.svg" alt="minus" id="icon_minus3" class="icon">
+                    <img src="./faq-accordion-main/assets/images/icon-plus.svg" alt="plus" id="icon_plus3" class="icon">
+                </div>
+            </div>
+            <div class="answer text_hidden" id="answer3">
+                 <p>Definitely! Please do feel free to use whatever you build in your portfolio. Helping developers add professional-looking projects to their portfolio was one of the reasons we created this platform!</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="questions_title">
+                <h4><a href="">How can I get help if I'm stuck on a challenge?</a></h4>
+                <div id="icons4" class="hidden" >
+                    <img src="./faq-accordion-main/assets/images/icon-minus.svg" alt="minus" id="icon_minus4" class="icon">
+                    <img src="./faq-accordion-main/assets/images/icon-plus.svg" alt="plus" id="icon_plus4" class="icon">
+                </div>
+            </div>
+            <div class="answer text_hidden" id="answer4">
+                <p>The best (and quickest) way to get help on a challenge is in our Discord server. There are thousands of other developers in there, so it's a great place to ask questions. We even have a dedicated "help" channel! If you haven't joined yet, you can get an invite to our Discord server here.</p>
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+    <script>
+        function toggleVisibility(answerId, iconsId) {
+            const answer = document.querySelector(answerId);
+            const icons = document.querySelector(iconsId);
+            const link = answer.previousElementSibling.querySelector('a');
+    
+            function toggle() {
+                event.preventDefault();
+                answer.classList.toggle("text_hidden");
+                icons.classList.toggle("hidden");
+                icons.classList.toggle("shown");
+            }
+    
+            if (icons.className === "hidden") {
+                icons.addEventListener("click", toggle);
+                link.addEventListener("click", toggle);
+            }
+        }
+    
+        toggleVisibility("#answer", "#icons");
+        toggleVisibility("#answer2", "#icons2");
+        toggleVisibility("#answer3", "#icons3");
+        toggleVisibility("#answer4", "#icons4");
+    </script>
+    
+    
+
+   <!--  <script>
+        const answer = document.querySelector("#answer");
+        const icons = document.querySelector("#icons")
+       
+        if(icons.className == "hidden") {
+            icons.addEventListener("click", () => {
+                answer.classList.toggle("text_hidden");
+                icons.classList.toggle("hidden"); 
+                icons.classList.toggle("shown");
+        })};
+
+        const answer2 = document.querySelector("#answer2");
+        const icons2 = document.querySelector("#icons2")
+       
+        if(icons2.className == "hidden") {
+            icons2.addEventListener("click", () => {
+                answer2.classList.toggle("text_hidden");
+                icons2.classList.toggle("hidden"); 
+                icons2.classList.toggle("shown");
+        })};
+
+        const answer3 = document.querySelector("#answer3");
+        const icons3 = document.querySelector("#icons3")
+      
+        if(icons3.className == "hidden") {
+            icons3.addEventListener("click", () => {
+                answer3.classList.toggle("text_hidden");
+                icons3.classList.toggle("hidden"); 
+                icons3.classList.toggle("shown");
+        })};
+
+        const answer4 = document.querySelector("#answer4");
+        const icons4 = document.querySelector("#icons4")
+        
+        if(icons4.className == "hidden") {
+            icons4.addEventListener("click", () => {
+                answer4.classList.toggle("text_hidden");
+                icons4.classList.toggle("hidden"); 
+                icons4.classList.toggle("shown");
+        })};
+
+    </script> -->
+</body>
+</html>
